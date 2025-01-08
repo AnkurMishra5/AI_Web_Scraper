@@ -5,3 +5,4 @@ openai
 pydantic
 pytest
 pandas
+streamlit-authenticator
