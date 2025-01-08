@@ -1,0 +1,7 @@
+# Python dependencies
+streamlit
+selenium
+openai
+pydantic
+pytest
+pandas
