@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+# Add the project root directory to the Python path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 # Streamlit app
 import streamlit as st
 from src.scraper import scrape_website
