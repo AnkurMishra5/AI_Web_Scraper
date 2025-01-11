@@ -6,3 +6,8 @@ pydantic
 pytest
 pandas
 streamlit-authenticator
+streamlit-tags
+beautifulsoup4
+html2text
+tiktoken
+python-dotenv

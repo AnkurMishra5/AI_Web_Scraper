@@ -1,0 +1,11 @@
+url = 'https://www.zillow.com/salt-lake-city-ut/'
+fields = ['Address', 'Price', 'Beds', 'Baths', 'Sqft', 'Home Type', 'Listing Age', 'Picture of home URL', 'Listing URL']
+
+url = 'https://scrapeme.live/shop/'
+fields = ['name', 'price']
+
+url = 'https://www.copart.com/vehicle-search-featured/select?displayStr=Copart%20Select&from=%2FvehicleFinder'
+fields = ['Image', 'Vehicle Name', 'Vehicle Info', 'Condition', 'Sale Info', 'Bids']
+
+url = 'https://news.ycombinator.com/'
+fields = ['Title', 'Number of Points', 'Creator', 'Time Posted', 'Number of Comments']

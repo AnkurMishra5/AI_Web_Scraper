@@ -1,4 +1,4 @@
-A versatile and user-friendly web scraping application that extracts data from websites and presents it in a structured format. This project is designed with a modular architecture, making it easy to extend, maintain, and deploy. The application includes a Streamlit-based user interface and integrates Selenium for robust scraping capabilities.
+A versatile and user-friendly web scraping application that extracts data from websites and presents it in a structured format. This project is designed with a modular architecture, making it easy to extend, maintain, and deploy. The application includes a Streamlit-based user interface and integrates Selenium for robust scraping capabilities. 
 
 Features
 

@@ -1,23 +1,27 @@
-import sys
-from pathlib import Path
-
-# Add the project root directory to the Python path
-sys.path.append(str(Path(__file__).resolve().parent.parent))
-
-# Streamlit app
 import streamlit as st
-from src.scraper import scrape_website
+from streamlit_tags import st_tags_sidebar
+import pandas as pd
+import json
+from datetime import datetime
+from scraper import fetch_html_selenium, save_raw_data, format_data, save_formatted_data
 
-def main():
-    st.title("Universal Web Scraper")
+st.set_page_config(page_title="Universal Web Scraper")
+st.title("Universal Web Scraper")
 
-    url = st.text_input("Enter the URL to scrape:")
-    if st.button("Scrape"):
-        if url:
-            data = scrape_website(url)
-            st.write("Scraped Data:", data)
-        else:
-            st.error("Please provide a valid URL.")
+# Sidebar components
+st.sidebar.title("Web Scraper Settings")
+model_selection = st.sidebar.selectbox("Select Model", options=["gpt-40-mini", "gpt-40-2024-08-06"], index=0)
+url_input = st.sidebar.text_input("Enter URL")
 
-if __name__ == "__main__":
-    main()
+tags = st_tags_sidebar(
+    label="Enter Fields to Extract:",
+    text="Press enter to add a tag",
+    value=[],
+    key="tags_input",
+)
+
+fields = tags
+
+if st.sidebar.button("Scrape"):
+    st.spinner("Scraping in progress...")
+    # Call scrape functions
