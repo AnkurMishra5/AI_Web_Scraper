@@ -1,33 +1,62 @@
-A versatile and user-friendly web scraping application that extracts data from websites and presents it in a structured format. This project is designed with a modular architecture, making it easy to extend, maintain, and deploy. The application includes a Streamlit-based user interface and integrates Selenium for robust scraping capabilities. 
+# Universal Web Scraper
 
-Features
+A versatile and user-friendly web scraping application that extracts data from websites and presents it in a structured format. This project is designed with a modular architecture, making it easy to extend, maintain, and deploy. The application includes a Streamlit-based user interface and integrates Selenium for robust scraping capabilities.
 
-Streamlit UI: A simple and interactive user interface for inputting URLs and viewing scraped data.
-Selenium Integration: Handles dynamic content and complex websites.
-Modular Design: Easily extendable codebase with separate utility and logic files.
-Dynamic Data Models: Uses Pydantic for dynamic and structured data modeling.
-Output Formats: Supports raw, cleaned, and formatted data outputs (Markdown, JSON, Excel).
-Cloud-Ready: Deployable on Streamlit Cloud and other hosting platforms.
+## Features
 
-Installation Prerequisites
+- **Streamlit UI**: A simple and interactive user interface for inputting URLs and viewing scraped data.
+- **Selenium Integration**: Handles dynamic content and complex websites.
+- **Modular Design**: Easily extendable codebase with separate utility and logic files.
+- **Dynamic Data Models**: Uses Pydantic for dynamic and structured data modeling.
+- **Output Formats**: Supports raw, cleaned, and formatted data outputs (Markdown, JSON, Excel).
+- **Cloud-Ready**: Deployable on Streamlit Cloud and other hosting platforms.
 
-Python 3.9 or above
-pip (Python package installer)
-Google Chrome and ChromeDriver
+## Setup
 
-Steps
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/yourusername/universal-web-scraper.git
+    cd universal-web-scraper
+    ```
 
-Clone the repository:
+2. **Create and activate a virtual environment**:
+    ```sh
+    python -m venv venv
+    .\venv\Scripts\activate  # On Windows
+    source venv/bin/activate  # On macOS/Linux
+    ```
 
-git clone https://github.com/your-username/universal-web-scraper.git
-cd universal-web-scraper
+3. **Install the required packages**:
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-Install dependencies:
+4. **Download the Chrome WebDriver**:
+    - Download the appropriate version of ChromeDriver from [here](https://sites.google.com/a/chromium.org/chromedriver/downloads).
+    - Place the `chromedriver.exe` file in the `chromedriver-win64` directory.
 
-pip install -r requirements.txt
-Set up the .env file (if required) with any API keys or environment variables.
+5. **Set up environment variables**:
+    - Create a [.env](http://_vscodecontentref_/2) file in the root directory and add your OpenAI API key:
+    ```env
+    OPENAI_API_KEY=your_openai_api_key
+    ```
 
-Run the application locally:
+## Usage
 
-streamlit run app/streamlit_app.py
+1. **Run the Streamlit app**:
+    ```sh
+    streamlit run streamlit_app.py
+    ```
 
+2. **Interact with the UI**:
+    - Enter the URL you want to scrape.
+    - Add the fields you want to extract.
+    - Click the "Scrape" button to start the scraping process.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
